@@ -1,0 +1,7 @@
+{
+    "senhaAtual": { "numero": "260819-SP001", "guichê": "guichê 03" },
+    "historico": [
+        { "numero": "260819-SG004", "guichê": "guichê 01" },
+        { "numero": "260819-SE002", "guichê": "guichê 02" }
+    ]
+}

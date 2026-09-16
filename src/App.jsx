@@ -1,10 +1,9 @@
-function App() {
+import PainelChamadas from './pages/chamadas/painelChamadas';
 
+function App() {
   return (
-    <div>
-      <h1>Sistema Chamados</h1>
-    </div>
-  )
+    <PainelChamadas />
+  );
 }
 
-export default App
+export default App;
