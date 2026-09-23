@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Emissao from "./pages/emissao";
-import Home from "./pages/home";
-import Guiche from "./pages/guiche";
-import Historico from "./pages/historico";
-import dados from "./data/dados.json";
-import { useEffect } from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Emissao from './pages/emissao';
+import Home from './pages/home';
+import Guiche from './pages/guiche';
+
+
 
 function App() {
   useEffect(() => {
