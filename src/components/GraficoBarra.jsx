@@ -51,4 +51,3 @@ export function GraficoBarra({ senhas, filtroTipo }) {
       </div>
     </div>
   );
-}
