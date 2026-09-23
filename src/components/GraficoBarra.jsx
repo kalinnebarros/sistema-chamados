@@ -1,7 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import '../styles/Graficos.css';
 
-export default function GraficoBarra({ senhas, filtroTipo }) {
+export function GraficoBarra({ senhas, filtroTipo }) {
   const calcularMedia = (lista, tipo, campoInicio, campoFim) => {
     const filtradas = lista.filter(s => s.tipo === tipo && s[campoInicio] && s[campoFim]);
     if (filtradas.length === 0) return 0;
