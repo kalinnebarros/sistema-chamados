@@ -1,0 +1,124 @@
+
+[
+  {
+    "id": "260917-SP005",
+    "numero": "SP005",
+    "tipo": "SP",
+    "estado": "EMITIDA",
+    "guiche": null,
+    "dataCriacao": "2026-09-17T08:20:00.000Z",
+    "dataChamada": null,
+    "dataFinalizacao": null,
+    "tentativasChamada": 0
+  },
+  {
+    "id": "260917-SP001",
+    "numero": "SP001",
+    "tipo": "SP",
+    "estado": "AGUARDANDO",
+    "guiche": null,
+    "dataCriacao": "2026-09-17T08:00:00.000Z",
+    "dataChamada": null,
+    "dataFinalizacao": null,
+    "tentativasChamada": 0
+  },
+  {
+    "id": "260917-SE001",
+    "numero": "SE001",
+    "tipo": "SE",
+    "estado": "AGUARDANDO",
+    "guiche": null,
+    "dataCriacao": "2026-09-17T08:05:00.000Z",
+    "dataChamada": null,
+    "dataFinalizacao": null,
+    "tentativasChamada": 0
+  },
+  {
+    "id": "260917-SG001",
+    "numero": "SG001",
+    "tipo": "SG",
+    "estado": "AGUARDANDO",
+    "guiche": null,
+    "dataCriacao": "2026-09-17T08:10:00.000Z",
+    "dataChamada": null,
+    "dataFinalizacao": null,
+    "tentativasChamada": 0
+  },
+  {
+    "id": "260917-SP002",
+    "numero": "SP002",
+    "tipo": "SP",
+    "estado": "CHAMADA",
+    "guiche": "Guichê 01",
+    "dataCriacao": "2026-09-17T08:12:00.000Z",
+    "dataChamada": "2026-09-17T08:30:00.000Z",
+    "dataFinalizacao": null,
+    "tentativasChamada": 1
+  },
+  {
+    "id": "260917-SE002",
+    "numero": "SE002",
+    "tipo": "SE",
+    "estado": "CHAMADA_NOVAMENTE",
+    "guiche": "Guichê 03",
+    "dataCriacao": "2026-09-17T08:15:00.000Z",
+    "dataChamada": "2026-09-17T08:32:00.000Z",
+    "dataFinalizacao": null,
+    "tentativasChamada": 2
+  },
+  {
+    "id": "260917-SG002",
+    "numero": "SG002",
+    "tipo": "SG",
+    "estado": "EM_ATENDIMENTO",
+    "guiche": "Guichê 02",
+    "dataCriacao": "2026-09-17T08:18:00.000Z",
+    "dataChamada": "2026-09-17T08:25:00.000Z",
+    "dataFinalizacao": null,
+    "tentativasChamada": 1
+  },
+  {
+    "id": "260917-SP003",
+    "numero": "SP003",
+    "tipo": "SP",
+    "estado": "ATENDIDA",
+    "guiche": "Guichê 01",
+    "dataCriacao": "2026-09-17T07:30:00.000Z",
+    "dataChamada": "2026-09-17T07:40:00.000Z",
+    "dataFinalizacao": "2026-09-17T07:55:00.000Z",
+    "tentativasChamada": 1
+  },
+  {
+    "id": "260917-SE003",
+    "numero": "SE003",
+    "tipo": "SE",
+    "estado": "ATENDIDA",
+    "guiche": "Guichê 02",
+    "dataCriacao": "2026-09-17T07:35:00.000Z",
+    "dataChamada": "2026-09-17T07:45:00.000Z",
+    "dataFinalizacao": "2026-09-17T08:00:00.000Z",
+    "tentativasChamada": 1
+  },
+  {
+    "id": "260917-SG003",
+    "numero": "SG003",
+    "tipo": "SG",
+    "estado": "ATENDIDA",
+    "guiche": "Guichê 03",
+    "dataCriacao": "2026-09-17T07:40:00.000Z",
+    "dataChamada": "2026-09-17T07:50:00.000Z",
+    "dataFinalizacao": "2026-09-17T08:05:00.000Z",
+    "tentativasChamada": 1
+  },
+  {
+    "id": "260917-SG004",
+    "numero": "SG004",
+    "tipo": "SG",
+    "estado": "NAO_COMPARECEU",
+    "guiche": "Guichê 01",
+    "dataCriacao": "2026-09-17T07:20:00.000Z",
+    "dataChamada": "2026-09-17T07:30:00.000Z",
+    "dataFinalizacao": "2026-09-17T07:38:00.000Z",
+    "tentativasChamada": 2
+  }
+]
