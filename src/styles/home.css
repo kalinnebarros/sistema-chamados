@@ -9,31 +9,14 @@
     cursor: pointer;
 
 }
-
-.botao:hover{
-    background-color: #0056b3;
-}
-#h1{
+#h{
     text-align: center;
     margin-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.botaoSelecionado{
-    text-align: center;
-    background-color: #09148b;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-
-}
-
 .container {
     width: 500px;
-    padding: 30px;
+    padding: 60px;
     margin: 0 auto;
 
     background-color: white;
@@ -45,17 +28,3 @@
 
     text-align: center;
 }
-
-
-body {
-    margin: 0;
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #f5f7fa;
-}
-
-

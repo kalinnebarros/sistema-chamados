@@ -1,9 +1,20 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Emissao from './pages/emissao';
+import Home from './pages/home';
+import Guiche from './pages/guiche'; 
+
+
 function App() {
 
   return (
-    <div>
-      <h1>Sistema Chamados</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/emissao' element={<Emissao/>}/>
+      <Route path='/guiche' element={<Guiche/>}/>
+    </Routes>
+      
+    </BrowserRouter>
   )
 }
 
