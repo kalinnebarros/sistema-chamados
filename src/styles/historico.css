@@ -1,0 +1,30 @@
+.historico-container {
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.historico-titulo {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.historico-descricao {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.btn-abrir-dashboard {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-abrir-dashboard:hover {
+  background-color: #2980b9;
+}

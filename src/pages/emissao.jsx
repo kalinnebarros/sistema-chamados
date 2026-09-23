@@ -4,8 +4,6 @@ import {useState} from 'react';
 
 
 
-
-
 export default function Emissao(){
 
     const [atendimento, setAtendimento] = useState('');
@@ -52,7 +50,6 @@ export default function Emissao(){
     }
     
     
-
 
     return(
         
