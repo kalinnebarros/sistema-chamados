@@ -1,0 +1,195 @@
+.painel-tv-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b1120;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.painel-principal {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  background: radial-gradient(circle at center, #1e293b 0%, #0b1120 100%);
+  border-right: 4px solid #1e293b;
+  transition: background-color 0.4s ease;
+}
+
+.painel-principal.painel-alerta-ativo {
+  animation: piscarChamada 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes piscarChamada {
+  0% { background-color: #1e293b; }
+  100% { background-color: #0369a1; }
+}
+
+.painel-cabecalho {
+  text-align: center;
+}
+
+.painel-cabecalho h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.painel-subtitulo {
+  font-size: 1rem;
+  color: #94a3b8;
+}
+
+.destaque-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.tipo-atendimento-pill {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background-color: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 8px 30px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.senha-grande {
+  font-size: clamp(5rem, 11vw, 8.5rem);
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+.box-guiche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e293b;
+  border: 2px solid #0284c7;
+  border-radius: 20px;
+  padding: 16px 56px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.rotulo-guiche {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+}
+
+.valor-guiche {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #38bdf8;
+}
+
+.aviso-segunda-chamada {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  animation: pulsoAviso 1s infinite;
+}
+
+@keyframes pulsoAviso {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.96); }
+}
+
+.painel-sem-chamadas {
+  text-align: center;
+  color: #64748b;
+}
+
+.painel-sem-chamadas p {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* Coluna Lateral */
+.painel-historico-coluna {
+  flex: 3;
+  background-color: #0f172a;
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.painel-historico-coluna h2 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  margin: 0 0 24px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 16px;
+}
+
+.lista-ultimas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.item-historico-tv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 6px solid #38bdf8;
+}
+
+.dados-senha-historico {
+  display: flex;
+  flex-direction: column;
+}
+
+.codigo-historico {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.tipo-historico {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.guiche-historico {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+.guiche-historico strong {
+  font-size: 1.6rem;
+  color: #38bdf8;
+}
+
+.sem-historico {
+  text-align: center;
+  color: #475569;
+  margin-top: 40px;
+}

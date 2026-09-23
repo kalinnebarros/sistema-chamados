@@ -5,6 +5,8 @@ import Guiche from "./pages/guiche";
 import Historico from "./pages/historico";
 import dados from "./data/dados.json";
 import { useEffect } from "react";
+import Painel from './pages/painel';
+
 
 function App() {
   useEffect(() => {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/emissao" element={<Emissao />} />
         <Route path="/guiche" element={<Guiche />} />
         <Route path="/historico" element={<Historico />} />
+        <Route path="/painel" element={<Painel />} />
       </Routes>
     </BrowserRouter>
   );
