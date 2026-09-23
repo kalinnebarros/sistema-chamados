@@ -1,7 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Emissao from './pages/emissao';
 import Home from './pages/home';
-import Guiche from './pages/guiche'; 
+import Guiche from './pages/guiche';
+
 
 
 function App() {
