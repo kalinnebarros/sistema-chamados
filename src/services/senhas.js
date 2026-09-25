@@ -47,7 +47,7 @@ export default function gerarSenha(tipo){
     "id":IdSenha,
     "numero":senhaCompleta,
     "tipo":tipo,
-    "estado":"EMITIDA",
+    "estado":"AGUARDANDO",
     "guiche":null,
     "dataCriacao":hoje.toISOString(),
     "dataChamada":null,
