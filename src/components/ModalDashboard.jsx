@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import GraficoRosca from "./GraficoRosca.jsx";
-import GraficoBarra from "./GraficoBarra.jsx";
+import { GraficoBarra } from "./GraficoBarra.jsx";
 import "../styles/ModalDashboard.css";
 
 export default function ModalDashboard({ onClose }) {
