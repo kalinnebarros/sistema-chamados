@@ -17,8 +17,8 @@ export default function Emissao(){
         setAtendimento('Atendimento Prioritário');
         
     }   
-    function AtendimentoEspecial(){
-        setAtendimento('Atendimento Especial');
+    function AtendimentoExame(){
+        setAtendimento('Atendimento Exame');
         
     }
 
@@ -34,7 +34,7 @@ export default function Emissao(){
         else if (atendimento === 'Atendimento Prioritário'){
             tipo= 'SP';         
         }
-        else if (atendimento === 'Atendimento Especial'){
+        else if (atendimento === 'Atendimento Exame'){
             tipo= 'SE';
             
             
@@ -69,14 +69,13 @@ export default function Emissao(){
             <h1>Escolha o tipo de atendimento: </h1>
             <Botao className={atendimento === 'Atendimento Geral' ? "botaoSelecionado" : "botao"} texto="Atendimento Geral" onClick={AtendimentoGeral}></Botao>
             <Botao className={atendimento === 'Atendimento Prioritário' ? "botaoSelecionado" : "botao"} texto="Atendimento Prioritário" onClick={AtendimentoPrioritario}></Botao>
-            <Botao className={atendimento === 'Atendimento Especial' ? "botaoSelecionado" : "botao"} texto="Atendimento Especial" onClick={AtendimentoEspecial}></Botao>
+            <Botao className={atendimento === 'Atendimento Exame' ? "botaoSelecionado" : "botao"} texto="Atendimento Exame" onClick={AtendimentoExame}></Botao>
         </div>
         <div>
             <h2>Emitir Senha</h2>
             <Botao className="botao" texto="Emitir Senha" onClick={EmitirSenha} ></Botao>
             <h2 className="senha">{Senha && `Senha Emitida: ${Senha}`}</h2>
             <Botao className="botao" texto= "Reiniciar" onClick= {Reiniciar} ></Botao>
-            
         </div>
         </div>
     )   

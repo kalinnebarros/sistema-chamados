@@ -1,0 +1,113 @@
+.menu-btn-hamburguer {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.menu-btn-hamburguer:hover {
+  background-color: #2980b9;
+}
+
+.tracinho {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.menu-overlay.visivel {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -300px; 
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1002; 
+  transition: left 0.3s ease-in-out;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-lateral.aberto {
+  left: 0;
+}
+
+.menu-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.menu-cabecalho h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.menu-btn-fechar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lista li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-lista a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.menu-lista a:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+  padding-left: 25px; 
+}

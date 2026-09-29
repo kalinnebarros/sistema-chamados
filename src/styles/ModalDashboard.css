@@ -23,19 +23,26 @@
 .btn-fechar {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 25px; 
   background: none;
   border: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   color: #555;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.btn-fechar:hover {
+  background-color: #f0f0f0; 
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 25px; 
   margin-bottom: 25px;
   border-bottom: 1px solid #eee;
   padding-bottom: 15px;
