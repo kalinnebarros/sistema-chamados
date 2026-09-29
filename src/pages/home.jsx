@@ -12,11 +12,11 @@ export default function Home(){
         </div>
     
         <div>
-            <h id="h">
+            <h1 id="h">
             <Link to="/emissao">
             <Botao className="botao" texto="Iniciar"></Botao> 
             </Link>
-        </h>
+        </h1>
         </div>
         </div>
     )

@@ -1,8 +1,11 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Emissao from './pages/emissao';
-import Home from './pages/home';
-import Guiche from './pages/guiche';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Emissao from "./pages/emissao";
+import Home from "./pages/home";
+import Guiche from "./pages/guiche";
+import Historico from "./pages/historico";
+import dados from "./data/dados.json";
+import { useEffect } from "react";
+import Painel from './pages/painel';
 
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
         <Route path="/emissao" element={<Emissao />} />
         <Route path="/guiche" element={<Guiche />} />
         <Route path="/historico" element={<Historico />} />
+        <Route path="/painel" element={<Painel />} />
       </Routes>
     </BrowserRouter>
   );
