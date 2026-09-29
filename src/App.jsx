@@ -4,9 +4,9 @@ import Home from "./pages/home";
 import Guiche from "./pages/guiche";
 import Historico from "./pages/historico";
 import dados from "./data/dados.json";
-import { useEffect } from "react";
+import MenuNavegacao from "./components/MenuNavegacao";
 import Painel from './pages/painel';
-
+import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
@@ -20,6 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <MenuNavegacao />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/emissao" element={<Emissao />} />

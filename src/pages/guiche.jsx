@@ -1,10 +1,3 @@
-//export default function Guiche() {
-    //return (
-     //   <div>
-         //   <h1>Guichê</h1>
-       // </div>
-   // );
-//}
 import { useEffect, useState } from "react";
 import "../styles/guiche.css";
 import dadosIniciais from "../data/dados.json";

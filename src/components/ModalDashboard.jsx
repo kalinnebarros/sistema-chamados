@@ -85,7 +85,7 @@ export default function ModalDashboard({ onClose }) {
             >
               <option value="TODOS">Todos os Tipos</option>
               <option value="SP">Preferencial (SP)</option>
-              <option value="SE">Especial (SE)</option>
+              <option value="SE">Exames (SE)</option>
               <option value="SG">Geral (SG)</option>
             </select>
           </div>

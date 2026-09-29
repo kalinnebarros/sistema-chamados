@@ -42,18 +42,22 @@
 .btn-limpar-filtros {
   background-color: #e9ecef;
   color: #333;
+  margin-left: auto; 
+  white-space: nowrap; 
 }
 
 .historico-filtros {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1.4fr 1fr 1fr auto;
-  gap: 10px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 15px; 
+  margin-bottom: 25px;
 }
 
 .historico-filtros input,
 .historico-filtros select {
-  width: 100%;
+  flex: 1; 
+  min-width: 150px; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -102,9 +106,6 @@
 }
 
 @media (max-width: 1000px) {
-  .historico-filtros {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media (max-width: 650px) {
@@ -114,6 +115,17 @@
   }
 
   .historico-filtros {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .historico-filtros input,
+  .historico-filtros select {
+    width: 100%;
+  }
+
+  .btn-limpar-filtros {
+    margin-left: 0;
+    width: 100%; 
   }
 }

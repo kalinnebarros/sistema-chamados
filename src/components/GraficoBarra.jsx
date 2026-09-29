@@ -18,11 +18,11 @@ export default function GraficoBarra({ senhas, filtroTipo }) {
   if (filtroTipo === "TODOS") {
     dadosGrafico = [
       { nome: 'Preferencial', Espera: calcularMedia(senhas, 'SP', 'dataCriacao', 'dataChamada'), Atendimento: calcularMedia(senhas, 'SP', 'dataChamada', 'dataFinalizacao') },
-      { nome: 'Especial', Espera: calcularMedia(senhas, 'SE', 'dataCriacao', 'dataChamada'), Atendimento: calcularMedia(senhas, 'SE', 'dataChamada', 'dataFinalizacao') },
+      { nome: 'Exames', Espera: calcularMedia(senhas, 'SE', 'dataCriacao', 'dataChamada'), Atendimento: calcularMedia(senhas, 'SE', 'dataChamada', 'dataFinalizacao') },
       { nome: 'Geral', Espera: calcularMedia(senhas, 'SG', 'dataCriacao', 'dataChamada'), Atendimento: calcularMedia(senhas, 'SG', 'dataChamada', 'dataFinalizacao') }
     ];
   } else {
-    const nomesMap = { SP: 'Preferencial', SE: 'Especial', SG: 'Geral' };
+    const nomesMap = { SP: 'Preferencial', SE: 'Exames', SG: 'Geral' };
     dadosGrafico = [
       {
         nome: nomesMap[filtroTipo] || filtroTipo,

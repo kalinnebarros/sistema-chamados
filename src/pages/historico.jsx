@@ -1,11 +1,6 @@
 import { useState } from 'react';
 import ModalDashboard from '../components/ModalDashboard';
-import dadosDemonstracao from '../data/dados.json';
 import '../styles/historico.css';
-
-// IDs que já vêm no dados.json do projeto.
-// Eles continuam existindo para as outras telas, mas não aparecem no Histórico.
-const idsDemonstracao = dadosDemonstracao.map((item) => item.id);
 
 function carregarAtendimentos() {
   try {
@@ -15,9 +10,7 @@ function carregarAtendimentos() {
       return [];
     }
 
-    return dadosSalvos.filter(
-      (item) => !idsDemonstracao.includes(item.id)
-    );
+    return dadosSalvos;
   } catch {
     return [];
   }
@@ -61,12 +54,14 @@ export default function Historico() {
     const dataAtendimento = item.dataCriacao
       ? item.dataCriacao.slice(0, 10)
       : '';
-
+    const dataFinalizacao = item.dataFinalizacao
+      ? item.dataCriacao.slice(0, 10)
+      : '';
     const buscaOk = !busca || textoBusca.includes(busca.toLowerCase());
     const tipoOk = !tipo || item.tipo === tipo;
     const estadoOk = !estado || item.estado === estado;
-    const dataInicialOk = !dataInicial || dataAtendimento >= dataInicial;
-    const dataFinalOk = !dataFinal || dataAtendimento <= dataFinal;
+    const dataInicialOk = !dataInicial || dataAtendimento === dataInicial;
+    const dataFinalOk = !dataFinal || dataFinalizacao === dataFinal;
 
     return buscaOk && tipoOk && estadoOk && dataInicialOk && dataFinalOk;
   });
@@ -110,7 +105,7 @@ export default function Historico() {
           <option value="">Todos os tipos</option>
           <option value="SG">Geral (SG)</option>
           <option value="SP">Preferencial (SP)</option>
-          <option value="SE">Especial (SE)</option>
+          <option value="SE">Exame (SE)</option>
         </select>
 
         <select value={estado} onChange={(e) => setEstado(e.target.value)}>

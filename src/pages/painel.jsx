@@ -28,20 +28,20 @@ export default function Painel() {
 
   const lerSenhasDoLocalStorage = () => {
     try {
-      const registos = localStorage.getItem('senhas');
-      if (!registos) return;
+      const registros = localStorage.getItem('senhas');
+      if (!registros) return;
 
-      const todas = JSON.parse(registos);
+      const todas = JSON.parse(registros);
 
       const chamadas = todas
-        .filter((s) => ['CHAMADA', 'CHAMADA_NOVAMENTE', 'EM_ATENDIMENTO', 'ATENDIDA'].includes(s.status))
-        .sort((a, b) => new Date(b.horaChamada || 0) - new Date(a.horaChamada || 0));
+        .filter((s) => ['CHAMADA', 'CHAMADA_NOVAMENTE', 'EM_ATENDIMENTO', 'ATENDIDA'].includes(s.estado))
+        .sort((a, b) => new Date(b.dataChamada || 0) - new Date(a.dataChamada || 0));
 
       if (chamadas.length > 0) {
         const maisRecente = chamadas[0];
 
         setSenhaAtual((anterior) => {
-          if (!anterior || anterior.codigo !== maisRecente.codigo || anterior.status !== maisRecente.status) {
+          if (!anterior || anterior.numero !== maisRecente.numero || anterior.estado !== maisRecente.estado) {
             tocarBip();
             setAnimando(true);
             setTimeout(() => setAnimando(false), 2200);
@@ -88,14 +88,14 @@ export default function Painel() {
               {senhaAtual.tipo || senhaAtual.tipoSigla || 'GERAL'}
             </span>
             
-            <div className="senha-grande">{senhaAtual.codigo}</div>
+            <div className="senha-grande">{senhaAtual.numero}</div>
 
             <div className="box-guiche">
               <span className="rotulo-guiche">GUICHÊ</span>
               <span className="valor-guiche">{senhaAtual.guiche || '01'}</span>
             </div>
 
-            {senhaAtual.status === 'CHAMADA_NOVAMENTE' && (
+            {senhaAtual.estado === 'CHAMADA_NOVAMENTE' && (
               <div className="aviso-segunda-chamada">2ª CHAMADA</div>
             )}
           </div>
@@ -112,9 +112,9 @@ export default function Painel() {
         <ul className="lista-ultimas">
           {ultimasSenhas.length > 0 ? (
             ultimasSenhas.map((item, idx) => (
-              <li key={item.codigo || idx} className="item-historico-tv">
+              <li key={item.numero || idx} className="item-historico-tv">
                 <div className="dados-senha-historico">
-                  <span className="codigo-historico">{item.codigo}</span>
+                  <span className="codigo-historico">{item.numero}</span>
                   <span className="tipo-historico">{item.tipo || item.tipoSigla || 'Geral'}</span>
                 </div>
                 <div className="guiche-historico">
@@ -123,7 +123,7 @@ export default function Painel() {
               </li>
             ))
           ) : (
-            <li className="sem-historico">Sem registos anteriores</li>
+            <li className="sem-historico">Sem registros anteriores</li>
           )}
         </ul>
       </aside>
