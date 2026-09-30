@@ -24,7 +24,17 @@ function carregarSenhas() {
 
 export default function Guiche() {
   const [senhas, setSenhas] = useState(() => carregarSenhas());
-  const [senhaAtual, setSenhaAtual] = useState(null);
+  
+  const [senhaAtual, setSenhaAtual] = useState(() => {
+    const dados = carregarSenhas();
+    const senhaEmAndamento = dados.find(
+      (s) => 
+        (s.estado === "CHAMADA" || 
+         s.estado === "CHAMADA_NOVAMENTE" || 
+         s.estado === "EM_ATENDIMENTO")
+    );
+    return senhaEmAndamento || null;
+  });
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(senhas));
@@ -146,7 +156,7 @@ export default function Guiche() {
       senha.id === senhaAtual.id
         ? {
             ...senha,
-            estado: "NÃO_COMPARECEU",
+            estado: "NAO_COMPARECEU",
             dataFinalizacao: agora,
             tentativasChamada: 2,
           }
